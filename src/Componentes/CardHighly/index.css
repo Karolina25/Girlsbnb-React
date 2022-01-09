@@ -1,0 +1,72 @@
+.card {
+  width: 188px;
+  height: 371px;
+}
+
+.card div {
+  height: 14px;
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+}
+
+.card label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #767676;
+}
+
+h2 {
+  margin: 4px 0 8px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.rate {
+  color: #008489;
+  height: 8px;
+  margin-top: 26px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.g-4 {
+  gap: 4px;
+}
+
+.time {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #484848;
+}
+
+.align-center {
+  align-items: center;
+}
