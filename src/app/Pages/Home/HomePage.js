@@ -3,7 +3,9 @@ import HomeTemplate from "../../Templates/HomeTemplate/HomeTemplate";
 
 const HomePage = ()=>{
     return(
-        <HomeTemplate></HomeTemplate>
+        <div>
+            <HomeTemplate></HomeTemplate>
+        </div>
     )
 }
 
