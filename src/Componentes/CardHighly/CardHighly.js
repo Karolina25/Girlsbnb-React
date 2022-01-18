@@ -3,8 +3,7 @@ import './index.css';
 import picture from '../images/highlyImage.png'
 
 const CardHighly = ()=>{
-  return(
-    <>
+  return ( 
     <div className="card">
       <img src={picture} alt="imageHighly"></img>
       <label>Mongolia</label>
@@ -17,7 +16,6 @@ const CardHighly = ()=>{
         </svg>
       </div>
     </div>
-    </>
   )
 }
 
