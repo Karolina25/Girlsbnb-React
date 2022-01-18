@@ -5,15 +5,15 @@ const SearchHome = () => {
     return (
         <div className='container-search'>
             <p className='title-search'>Book unique accommodations to code as never before</p>
-            <p className='label-search'>where</p>
+            <label className='label-search'>where</label>
             <input type="text" placeholder='Everywhere' className='input-search'></input>
             <div className='display-flex'>
-                <p className='label-search input-half'>Arrival</p>
-                <p className='label-search input-half'>Departure</p>
+                <label className='label-search input-half'>Arrival</label>
+                <label className='label-search input-half'>Departure</label>
             </div>
             <input type="date" placeholder='dd / mm / yyyy' className='input-search input-arrival'></input>
             <input type="date" placeholder='dd / mm / yyyy' className='input-search input-departure'></input>
-            <p className='label-search'>Developers</p>
+            <label className='label-search'>Developers</label>
             <input type="number" placeholder='1' className='input-search'></input>
             <div className='container-bnSearch'>
                 <button className='bn-search'>Search</button>
