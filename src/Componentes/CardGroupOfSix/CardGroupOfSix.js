@@ -2,12 +2,12 @@ import React from "react";
 import CardHighly from "../CardHighly/CardHighly";
 import './index.css';
 
-const CardHighlyGroup = () => {
+const CardGroupOfSix = ({title, description}) => {
   let numbers= [1,2,3,4,5,6];
   return (
   <div className="card-highly">
-    <h1>Highly rated experiences</h1> 
-    <p className="description-card">Multi-day extreme programming sessions organized by local experts with activities, meals and accommodation included</p>
+    <h1>{title}</h1> 
+    <p className="description-card">{description}</p>
     <div className="card-group">
       {numbers.map(e => <CardHighly
         title="Mongolia"
@@ -19,4 +19,4 @@ const CardHighlyGroup = () => {
   )
 }
 
-export default CardHighlyGroup;
+export default CardGroupOfSix;
