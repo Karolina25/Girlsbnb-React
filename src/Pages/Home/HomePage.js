@@ -1,12 +1,12 @@
 import React from "react";
 import HomeTemplate from "../../Templates/HomeTemplate/HomeTemplate";
-import CardHighly from "../../Componentes/CardHighly/CardHighly";
+import CardHighlyGroup from "../../Componentes/CardHighlyGroup/CardHighlyGroup";
 
 const HomePage = ()=>{
     return(
         <>
           <HomeTemplate></HomeTemplate>
-          <CardHighly></CardHighly>
+          <CardHighlyGroup></CardHighlyGroup>
         </> 
     )
 }
