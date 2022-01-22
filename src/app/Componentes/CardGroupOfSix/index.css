@@ -1,0 +1,24 @@
+.card-highly {
+  width: 1208px;
+  height: 469px;
+}
+
+.card-highly h1{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #484848;
+}
+
+.description-card{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #484848;
+  width: 571px;
+}
+.card-group {
+  display: flex;
+  flex-direction: row;
+  gap:16px;
+}
