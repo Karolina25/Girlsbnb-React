@@ -1,5 +1,5 @@
 import React from "react";
-import RoutesPages from "./Configuration/Routes/RoutesPages";
+import RoutesPages from "./app/Configuration/Routes/RoutesPages";
 
 const HomePage = ()=>{
     return(
