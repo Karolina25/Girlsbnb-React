@@ -33,7 +33,7 @@ const HomePage = ()=>{
             verifiedDescription="More than 200 verified stays"
             description="From 577 € / person - 3 days"
           />
-        </>
+        </> 
     )
 }
 
