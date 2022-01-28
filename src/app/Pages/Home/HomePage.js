@@ -18,7 +18,8 @@ const HomePage = ()=>{
     getAccommodation();
   }, []);
   
-    return(<>
+    return(
+        <>
           <HomeTemplate accommodation={accommodation} />
           <CardGroupOfSix
           description="Multi-day hackatons organized by local experts with activities, meals and accommodation included"
@@ -32,7 +33,7 @@ const HomePage = ()=>{
             verifiedDescription="More than 200 verified stays"
             description="From 577 € / person - 3 days"
           />
-          </>
+        </>
     )
 }
 
