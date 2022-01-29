@@ -1,31 +1,4 @@
-.container-components{
-    padding: 0 80px;
-}
 .container-ExplorerChairdnb{
     display: flex;
     justify-content:space-around;
-}
-.portada{
-    width: 100%;
-    position: relative;
-    
-}
-.container-searchHome{
-    position:absolute;
-    top:132px;
-    left: 80px;
-}
-.subTitle{
-    font-family: 'Roboto-bold';
-    margin-top: 88px;
-    margin-bottom: 24px;
-    font-size: 24px;
-    line-height: 28.13px;
-    color: #484848
-}
-.group-accommodation{
-    display: grid;
-    grid-template: 270px 270px 270px / 300px 300px 300px 300px;
-	grid-gap: 32px 16px;
-    margin-bottom: 88px;
 }

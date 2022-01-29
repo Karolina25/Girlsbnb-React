@@ -1,9 +1,9 @@
 import React from 'react';
 import './index.css';
 
-const SearchHome = ({className}) => {
+const SearchHome = () => {
     return (
-        <div className={`container-search ${className}`}>
+        <div className='container-search'>
             <p className='title-search'>Book unique accommodations to code as never before</p>
             <label className='label-search'>where</label>
             <input type="text" placeholder='Everywhere' className='input-search'></input>
