@@ -6,15 +6,13 @@ const Accommodation = ({city, score, price, img}) => {
         <div className='container-accommodation'>
             <img className="img-accommodation" src={img} alt={city}></img>  
             <div className='title-accommodation'>
-                <div className='fifty-percent'>
-                    <div className='cont-title-superhost'>
-                        <h2 className='title-superhost'>superhost</h2>
-                    </div>
-                    <h3 className='title-city'>{city}</h3>
+                <div className='cont-title-superhost'>
+                    <h2 className='title-superhost'>superhost</h2>
                 </div>
-                <div>
+                <h3 className='title-city'>{city}</h3>
+                <div className='cont-title-score'>
                     <h2 className='title-score'>{score}</h2>
-                </div>   
+                </div>
             </div>
             <p className='price-accommodation'>{price}</p>
         </div>
