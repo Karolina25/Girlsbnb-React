@@ -1,7 +1,7 @@
 import React from "react";
 import HomeTemplate from "../../Templates/HomeTemplate/HomeTemplate";
-import CardGroupOfSix from "../../Componentes/CardGroupOfSix/CardGroupOfSix";
-import Featured from "../../Componentes/Featured/Featured";
+import CardGroupOfSix from '../../Componentes/CardGroupOfSix/CardGroupOfSix'
+import Featured from '../../Componentes/Featured/Featured'
 
 const HomePage = ()=>{
     return(
