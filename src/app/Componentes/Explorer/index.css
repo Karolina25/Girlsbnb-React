@@ -3,7 +3,8 @@
     background: #FFFFFF;
     border-radius: 12px;
     box-shadow: 3px 3px 3px 3px #E5E5E5;
-    width: 30%;
+    width: 380px;
+    height: 85px; 
 }
 .image-explorer{
     width: 121px;

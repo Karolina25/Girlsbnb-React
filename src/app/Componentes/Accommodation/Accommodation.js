@@ -1,10 +1,10 @@
 import React from 'react'
 import './index.css'
 
-const Accommodation = ({city, score, price}) => {
+const Accommodation = ({city, score, price, img}) => {
     return (
         <div className='container-accommodation'>
-            <img className="img-accommodation" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5qXzxoQ1wTrqzE3elhHF7EZuwf9Om4WSnqw&usqp=CAU" alt="South Bend"></img>  
+            <img className="img-accommodation" src={img} alt={city}></img>  
             <div className='title-accommodation'>
                 <div className='cont-title-superhost'>
                     <h2 className='title-superhost'>superhost</h2>
