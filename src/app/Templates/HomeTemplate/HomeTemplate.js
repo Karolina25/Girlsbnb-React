@@ -1,23 +1,44 @@
 import React from "react";
 import './index.css'
-import { Accommodation, SearchHome } from "../../Componentes/index";
-import { Explorer } from "../../Componentes/index";
+import { Accommodation, SearchHome, Explorer } from "../../Componentes/index";
+import CardGroupOfSix from "../../Componentes/CardGroupOfSix/CardGroupOfSix";
+import picture from '../../Componentes/images/girlsbnbPortada.png';
 
-const HomeTemplate = ()=>{
+
+const HomeTemplate = ({accommodation})=>{
     return(
         <div>
-            <SearchHome></SearchHome>
-        <div className="container-ExplorerChairdnb">
-            <Explorer title="Accommodations" image="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paracas_National_Reserve._Ica%2C_Peru.jpg/1200px-Paracas_National_Reserve._Ica%2C_Peru.jpg" description="Paracas"></Explorer>
-            <Explorer title="Experiences" image="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paracas_National_Reserve._Ica%2C_Peru.jpg/1200px-Paracas_National_Reserve._Ica%2C_Peru.jpg" description="Paracas"></Explorer>
-            <Explorer title="Adventures" image="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paracas_National_Reserve._Ica%2C_Peru.jpg/1200px-Paracas_National_Reserve._Ica%2C_Peru.jpg" description="Paracas"></Explorer>
-        </div>
-        <br></br>
-        <Accommodation
-            city="Toledo"
-            score={4.98}
-            price="From 577 € / person - 3 days"
-          ></Accommodation>
+            <img src={picture} alt="Portada" className="portada"></img>
+            <div className="container-components">
+                <SearchHome className="container-searchHome"/>
+                <h2 className="subTitle">Explorer Chairdnb</h2>
+                <div className="container-ExplorerChairdnb">
+                    <Explorer title="Accommodations" image="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paracas_National_Reserve._Ica%2C_Peru.jpg/1200px-Paracas_National_Reserve._Ica%2C_Peru.jpg" description="Paracas"></Explorer>
+                    <Explorer title="Experiences" image="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paracas_National_Reserve._Ica%2C_Peru.jpg/1200px-Paracas_National_Reserve._Ica%2C_Peru.jpg" description="Paracas"></Explorer>
+                    <Explorer title="Adventures" image="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paracas_National_Reserve._Ica%2C_Peru.jpg/1200px-Paracas_National_Reserve._Ica%2C_Peru.jpg" description="Paracas"></Explorer>
+                </div>
+                <h2 className="subTitle">Chairdnb Plus accommodation</h2>
+                <CardGroupOfSix
+                description="Multi-day hackatons organized by local experts with activities, meals and accommodation included"
+                title="Discover Chairdnb adventures"
+                />
+                <h2 className="subTitle">Accommodation around the world</h2>
+                <div className="group-accommodation">
+                {accommodation.map((item, index) => {        
+                    return( 
+                            <Accommodation
+                            img={item.image_url}
+                            city={item.name}
+                            score={item.rating}
+                            price={`From ${item.price} "€ / person - 3 days`}/>     
+                    )
+                })}
+                </div>
+                <CardGroupOfSix
+                description="Multi-day extreme programming sessions organized by local experts with activities, meals and accommodation included"
+                title="Highly rated experiences"
+                />
+            </div>
         </div>
     )
 
