@@ -4,7 +4,7 @@ import './index.css'
 const Accommodation = ({city, score, price, img}) => {
     return (
         <div className='container-accommodation'>
-            <img className="img-accommodation" src={img} alt="South Bend"></img>  
+            <img className="img-accommodation" src={img} alt={city}></img>  
             <div className='title-accommodation'>
                 <div className='fifty-percent'>
                     <div className='cont-title-superhost'>
