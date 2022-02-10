@@ -6,7 +6,9 @@ import Featured from "../../Componentes/Featured/Featured";
 
 const HomePage = ()=>{
   const [accommodation, setAccommodation]=useState([]);
-  
+  const [adventures, setAdventures]=useState([]);
+  const [experiences, setExperiences]=useState([]);
+
   const getAccommodation = async () => {
     const data = await getAll("accommodations");
     if (data) {
@@ -14,25 +16,42 @@ const HomePage = ()=>{
     }
   } 
 
+  const getAdventures = async () => {
+    const data = await getAll("adventures");
+    if (data) {
+    setAdventures([...data]);
+    }
+  } 
+
+  const getExperiences = async () => {
+    const data = await getAll("experiences");
+    if (data) {
+    setExperiences([...data]);
+    }
+  } 
+
   useEffect(() => {
     getAccommodation();
+    getAdventures();
+    getExperiences();
   }, []);
-  
+
     return(
         <>
-          <HomeTemplate accommodation={accommodation} />
-          <CardGroupOfSix
-          description="Multi-day hackatons organized by local experts with activities, meals and accommodation included"
-          title="Discover Chairdnb adventures"
-          />
-          <CardGroupOfSix
-          description="Multi-day extreme programming sessions organized by local experts with activities, meals and accommodation included"
-          title="Highly rated experiences"
+          <HomeTemplate 
+            accommodation={accommodation}
+            adventures={adventures}
+            experiences={experiences}
+           />
+          {/*<CardGroupOfSix
+            adventures={adventures}
+            title="Discover adventures"
+            description="Multi-day hackatons organized by local experts with activities, meals and accommodation included"
           />
           <Featured
             verifiedDescription="More than 200 verified stays"
             description="From 577 € / person - 3 days"
-          />
+          />*/}
         </> 
     )
 }

@@ -5,7 +5,7 @@ import CardGroupOfSix from "../../Componentes/CardGroupOfSix/CardGroupOfSix";
 import picture from '../../Componentes/images/girlsbnbPortada.png';
 
 
-const HomeTemplate = ({accommodation})=>{
+const HomeTemplate = ({accommodation, adventures, experiences})=>{
     return(
         <div>
             <img src={picture} alt="Portada" className="portada"></img>
@@ -19,8 +19,9 @@ const HomeTemplate = ({accommodation})=>{
                 </div>
                 <h2 className="subTitle">Chairdnb Plus accommodation</h2>
                 <CardGroupOfSix
-                description="Multi-day hackatons organized by local experts with activities, meals and accommodation included"
-                title="Discover Chairdnb adventures"
+                    adventures={adventures}
+                    title="Discover adventures"
+                    description="Multi-day hackatons organized by local experts with activities, meals and accommodation included"
                 />
                 <h2 className="subTitle">Accommodation around the world</h2>
                 <div className="group-accommodation">
@@ -35,8 +36,9 @@ const HomeTemplate = ({accommodation})=>{
                 })}
                 </div>
                 <CardGroupOfSix
-                description="Multi-day extreme programming sessions organized by local experts with activities, meals and accommodation included"
-                title="Highly rated experiences"
+                    adventures={experiences}
+                    title="Highly rated experiences"
+                    description="Multi-day extreme programming sessions organized by local experts with activities, meals and accommodation included"
                 />
             </div>
         </div>

@@ -1,8 +1,11 @@
 import React from "react";
 import './index.css';
-import picture from '../images/highlyImage.png'
 
-const CardHighly = ({title, promotion, description, rating})=>{
+const CardHighly = ({title, 
+  promotion, 
+  description, 
+  rating, 
+  picture})=>{
   return ( 
     <div className="card">
       <img src={picture} alt="imageHighly"></img>
