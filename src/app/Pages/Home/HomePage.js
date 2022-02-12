@@ -8,7 +8,8 @@ const HomePage = ()=>{
   const [accommodation, setAccommodation]=useState([]);
   const [adventures, setAdventures]=useState([]);
   const [experiences, setExperiences]=useState([]);
-
+  const [allPlaces, setAllPlaces] = useState([])
+  
   const getAccommodation = async () => {
     const data = await getAll("accommodations");
     if (data) {
@@ -29,11 +30,19 @@ const HomePage = ()=>{
     setExperiences([...data]);
     }
   } 
+  
+  const getPlaces = async () => {
+    const data = await getAll("all");
+    if (data) {
+      setAllPlaces([...data]);
+    }
+  }
 
   useEffect(() => {
     getAccommodation();
     getAdventures();
     getExperiences();
+    getPlaces();
   }, []);
 
     return(
@@ -42,6 +51,7 @@ const HomePage = ()=>{
             accommodation={accommodation}
             adventures={adventures}
             experiences={experiences}
+            allPlaces={allPlaces}
            />
           {/*<CardGroupOfSix
             adventures={adventures}
