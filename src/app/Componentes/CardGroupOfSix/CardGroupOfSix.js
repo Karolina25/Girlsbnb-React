@@ -2,9 +2,9 @@ import React from "react";
 import CardHighly from "../CardHighly/CardHighly";
 import './index.css';
 
-const CardGroupOfSix = ({title, description, adventures}) => {
+const CardGroupOfSix = ({title, description, adventures, nameId}) => {
   return (
-  <div className="card-highly">
+  <div className="card-highly" id={nameId}>
     <h1>{title}</h1> 
     <p className="description-card">{description}</p>
     <div className="card-group">
