@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { getAll } from '../../../data/api/ApiService';
+import React, { useState } from 'react';
 import './index.css';
 
 const SearchHome = ({className, allPlaces}) => {
-  const [word, setWord] = useState(null)
-  const [arriveDate, setArriveDate] = useState(null)
-  const [departureDate, setDepartureDate] = useState(null)
+  const [word, setWord] = useState('')
+  const [arriveDate, setArriveDate] = useState('')
+  const [departureDate, setDepartureDate] = useState('')
+  const [people, setPeople] = useState(0)
 
   const handleInput = (e) => {
     const keyword = e.target.value;      
     setWord(keyword)
+    console.log(word)
   }
   
   const handleInputArrivalDate = (e) => {
@@ -22,13 +23,20 @@ const SearchHome = ({className, allPlaces}) => {
     setDepartureDate(keyword)
   }
 
+  const handleInputDevelopers = (e) => {
+    const keyword = e.target.value;      
+    setPeople(keyword)
+  }
+
   const handleSearch = () => {
     console.log(allPlaces);
-    console.log(word)
-    let filtrado= allPlaces.filter((e)=> e.country===word)
-    console.log(arriveDate)
-    console.log(departureDate)
-    console.log(filtrado)
+    console.log("word", word)
+    const dataFilterCountry= (word.length > 0) ? allPlaces.filter((e)=> e.country===word) : allPlaces
+    const dataFilterDates= (arriveDate.length > 0 && departureDate.length > 0) ? 
+    dataFilterCountry.filter((data) => (new Date(arriveDate) >= new Date(data.start_date) && new Date(departureDate) <= new Date(data.end_date)))
+    :dataFilterCountry
+    console.log(dataFilterCountry)
+    console.log(dataFilterDates)
   }
   
   return (
@@ -43,7 +51,7 @@ const SearchHome = ({className, allPlaces}) => {
       <input onChange={handleInputArrivalDate} type="date" placeholder='dd / mm / yyyy' className='input-search input-arrival'></input>
       <input onChange={handleInputDepartureDate} type="date" placeholder='dd / mm / yyyy' className='input-search input-departure'></input>
       <label className='label-search'>Developers</label>
-      <input type="number" placeholder='1' className='input-search'></input>
+      <input  onChange={handleInputDevelopers}  type="number" placeholder='1' className='input-search'></input>
       <div className='container-bnSearch'>
         <button className='bn-search' onClick={handleSearch}>Search</button>
       </div>
