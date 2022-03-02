@@ -1,11 +1,15 @@
 import React from "react";
 import './index.css'
-import { Accommodation, SearchHome, Explorer } from "../../Componentes/index";
+import { Accommodation, SearchHome, Explorer, Featured } from "../../Componentes/index";
 import CardGroupOfSix from "../../Componentes/CardGroupOfSix/CardGroupOfSix";
 import picture from '../../Componentes/images/girlsbnbPortada.png';
 
 
+<<<<<<< HEAD
+const HomeTemplate = ({accommodation, adventures, experiences, features})=>{
+=======
 const HomeTemplate = ({accommodation, adventures, experiences, allPlaces})=>{
+>>>>>>> 89a79d73842d1fd639e9d45f725e63bc32cf6b9e
     return(
         <div>
             <img src={picture} alt="Portada" className="portada"></img>
@@ -29,15 +33,7 @@ const HomeTemplate = ({accommodation, adventures, experiences, allPlaces})=>{
                 />
                 <h2 className="subTitle" id='Accommodations'>Accommodation around the world</h2>
                 <div className="group-accommodation">
-                {accommodation.map((item, index) => {        
-                    return( 
-                            <Accommodation
-                            img={item.image_url}
-                            city={item.name}
-                            score={item.rating}
-                            price={`From ${item.price} "€ / person - 3 days`}/>     
-                    )
-                })}
+                <Accommodation accommodation={accommodation} ></Accommodation>
                 </div>
                 <CardGroupOfSix
                     adventures={experiences}
@@ -45,6 +41,7 @@ const HomeTemplate = ({accommodation, adventures, experiences, allPlaces})=>{
                     title="Highly rated experiences"
                     description="Multi-day extreme programming sessions organized by local experts with activities, meals and accommodation included"
                 />
+                <Featured features={features}></Featured>
             </div>
         </div>
     )
