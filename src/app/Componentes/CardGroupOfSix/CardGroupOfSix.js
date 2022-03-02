@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { functionSlide } from '../Carousel/Carousel';
 import './index.css';
 
+<<<<<<< HEAD
 const CardGroupOfSix = ({title, description, adventures}) => {
   const [adventure, setAdventure] = useState([]);
   const [index, setIndex] = useState(0);
@@ -20,8 +21,11 @@ useEffect(()=>{
         setTimeout(() => setIndex(currentIndex), 3500);
       }
 },[adventures, index]) 
+=======
+const CardGroupOfSix = ({title, description, adventures, nameId}) => {
+>>>>>>> 89a79d73842d1fd639e9d45f725e63bc32cf6b9e
   return (
-  <div className="card-highly">
+  <div className="card-highly" id={nameId}>
     <h1>{title}</h1> 
     <p className="description-card">{description}</p>
     <div className="card-group">

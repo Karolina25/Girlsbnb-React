@@ -7,13 +7,20 @@ const HomePage = ()=>{
   const [adventures, setAdventures]=useState([]);
   const [experiences, setExperiences]=useState([]);
   const [features, setFeatured]=useState([]);
-
+  const [allPlaces, setAllPlaces] = useState([])
+  
   const getAccommodation = async () => {
     const data = await getAll("accommodations");
     if (data) {
     setAccommodation([...data]);
     }
   } 
+  const getPlaces = async () => {
+    const data = await getAll("all");
+    if (data) {
+      setAllPlaces([...data]);
+    }
+  }
 
   const getAdventures = async () => {
     const data = await getAll("adventures");
@@ -34,12 +41,20 @@ const HomePage = ()=>{
     setFeatured([...data]);
     }
   } 
+  
+  const getPlaces = async () => {
+    const data = await getAll("all");
+    if (data) {
+      setAllPlaces([...data]);
+    }
+  }
 
   useEffect(() => {
     getAccommodation();
     getAdventures();
     getExperiences();
     getFeatured();
+    getPlaces();
   }, []);
 
     return(
@@ -49,6 +64,7 @@ const HomePage = ()=>{
             adventures={adventures}
             experiences={experiences}
             features={features}
+            allPlaces={allPlaces}
            />
         </> 
     )
